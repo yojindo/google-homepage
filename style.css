@@ -1,0 +1,217 @@
+html{
+    height:100%;
+    min-height:100%;
+}
+
+/* navigation bar on the top of the page */
+
+#navbar{
+    display:grid;
+    grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "about store . gmail images menu sign-in";
+    margin: 0px, 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
+    font-family: arial,sans-serif;
+    font-size: 13px;
+}
+
+#about{
+    grid-area: about;
+    justify-content: center;
+    align-self: center;
+}
+#store{
+    grid-area: store;
+    justify-content: center;
+    align-self: center;
+}
+#gmail{
+    grid-area: gmail;
+    justify-content: center;
+    align-self: center;
+}
+#images{
+    grid-area: images;
+    justify-content: center;
+    align-self: center;
+}
+
+#menu{
+    grid-area: menu;
+    justify-content: center; 
+    align-self: center;
+    margin-left:5px;
+    margin-top:5px;
+
+}
+
+#sign-in{
+    grid-area: sign-in;
+    justify-content: center;
+    align-self: center;
+    background: #4387fd;
+    height:30px;
+    width: 50px;
+    color: white;
+    line-height:30px;
+    font-weight:bold;
+    margin-right: 5px;
+}
+
+/*main body of the page with logo */
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 70px 100px 200px;
+    grid-template-areas: 
+    ". logo ."
+    ". search ."
+    ". flexbox ."
+    ". searchBarMessage .";
+}
+
+#logo{
+    grid-area: logo;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    align-self:end;
+}
+#search{
+    grid-area: search;
+    height:34px !important;
+    border-radius: 25px;
+    background-color:transparent;
+    border: 1px solid #c6c6c6;
+    align-self:end;
+
+}
+
+#search:hover{
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1)
+}
+
+#search:focus{
+    border:1px solid #4d90fe;
+    border-radius: 25px;
+}
+
+#flexbox{
+    grid-area: flexbox;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#searchBarMessage{
+    grid-area: searchBarMessage;
+    text-align:center;
+    text-decoration: none;
+    color: #1a0dab;  
+    font-family: arial, sans-serif;
+    font-size: small;
+}
+#seachBarMessage:visited{
+    color:#609;
+}
+
+#google-search-btn{
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    font-size:14px;
+    color:#5F6368;
+    text-align:center;
+    cursor: pointer;
+    margin: 11px 4px;
+    line-height: 27px;
+    align-self:end;
+}
+
+#google-search-btn:hover{
+    color: #222;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+}
+
+#google-search-:focus{
+    border:1px solid #4d90fe
+}
+
+#random-search-btn{
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    font-size:14px;
+    color:#5F6368;
+    text-align:center;
+    cursor: pointer;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    line-height: 27px;
+    align-self:end;
+}
+
+#random-search-btn:hover{
+    color: #222;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1)
+}
+
+#random-search-btn:focus{
+    border: 1px solid #4d90fe
+}
+
+/*bottom portion of the page*/
+
+#footer {
+    display: grid;
+    grid-template-columns: 100px 100px 150px 1350px 70px 70px 70px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "advertising business howSearchWorks . privacy terms settings";
+
+    position:absolute;
+    bottom: 0;
+    font-size: 14px;
+    font-family: arial, san-serif;
+    color: #222;
+    line-height: 20px;
+    background: #f2f2f2; 
+     
+}
+
+#advertising {
+    grid-area: advertising;
+    justify-content: center;
+    align-self: center;
+}
+#business {
+    grid-area: business;
+    justify-content: center;
+    align-self: center;
+}
+#howSearchWorks {
+    grid-area: howSearchWorks;
+    justify-content: center;
+    align-self: center;
+}
+#privacy {
+    grid-area: privacy;
+    justify-content: center;
+    align-self: center;
+}
+#terms {
+    grid-area: terms;
+    justify-content: center;
+    align-self: center;
+}
+#settings {
+    grid-area: settings;
+    justify-content: center;
+    align-self: center;
+}
